@@ -1,0 +1,61 @@
+//first task
+//develop a simple quiz game that presents multiple-choice questions to the user.The game should keep track of the user's score
+//and provide feedback based on their answers. 
+#include<stdio.h>
+
+int main() {
+    printf("It is quiz game of 10 questions related to current affairs: \n");
+    int right = 0;
+    printf("Maximum marks=10\n");
+    char input[10];
+
+    printf("Q1: Which state in India was the first to report cases of the Omicron variant?\na) Maharashtra\nb) Kerala\nc) Delhi\nd) Karnataka\n");
+    scanf(" %c", &input[0]);
+    if (input[0] == 'd') right++;
+
+    printf("Q2: How many seats did BJP win in 2024 Lok sabha Election?\na) 99\nb)240 \nc)37 \nd) 39\n");
+    scanf(" %c", &input[1]);
+    if (input[1] == 'b') right++;
+
+    printf("Q3:Who was the Chief Election Commissioner during the 2024 Lok Sabha Election?\na) Ajay kumar\nb) Amitabh Kant\nc) Rajiv Kumar\nd) Sunil Arora\n");
+    scanf(" %c", &input[2]);
+    if (input[2] == 'c') right++;
+
+    printf("Q4: which state has the most number of Lok sabha seats?\na) Uttarpradesh\nb) Maharastra\nc) Chhattisgarh\nd)West Bengal\n");
+    scanf(" %c", &input[3]);
+    if (input[3] == 'a') right++;
+
+    printf("Q5: which Union terriory has the most number of Lok Sabha Seats\na) Delhi\nb) Puducherry\nc) Lakshadeep\nd) Chandigarh\n");
+    scanf(" %c", &input[4]);
+    if (input[4] == 'a') right++;
+
+    printf("Q6: In Which Constituency has Narendra Modi won in 2024 Lok Sabha election ?\na) Varanasi\nb) Mathura\nc) Rae Bareli\nd) Kanpur\n");
+    scanf(" %c", &input[5]);
+    if (input[5] == 'a') right++;
+
+    printf("Q7: When was the first Lok Sabha Election held in India?\na)1953-54 \nb) 1955-56\nc) 1947-48\nd) 1951-52\n");
+    scanf(" %c", &input[6]);
+    if (input[6] == 'd') right++;
+
+    printf("Q8: Who became the Chief Minister of West Bengal in 2021 after winning the assembly elections?\na) Mamata Banerjee\nb) Dilip Ghosh\nc) Amit Shah\nd) Suvendu Adhikari\n");
+    scanf(" %c", &input[7]);
+    if (input[7] == 'a') right++;
+
+    printf("Q9: Which is the smallest Lok sabha Constituency in India by area?\na) Chandni Chowk\nb)North Delhi\nc) Mumbai South\nd)Kolkta dakshin\n");
+    scanf(" %c", &input[8]);
+    if (input[8] == 'a') right++;
+
+    printf("Q10: In 2024 Lok Sabha Election held in how many phases?\na) 5\nb) 7\nc)8\nd) 9\n");
+    scanf(" %c", &input[9]);
+    if (input[9] == 'b') right++;
+
+    printf("Your score: %d\n", right);
+
+    printf("Feedback:\n");
+    if (right == 10) printf("Excellent job! Perfect score, well done!\n");
+    else if (right == 8 || right == 9) printf("Great work, very impressive!\n");
+    else if (right == 7 || right == 6) printf("Good job! You're on the right track!\n");
+    else if (right <= 5) printf("Keep practicing and you'll improve!\n");
+
+    return 0;
+}
